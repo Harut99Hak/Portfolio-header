@@ -1,0 +1,347 @@
+.NavbarItems {
+    background: linear-gradient(90deg, #333333 0%, #1a1a1a 100%);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.navbar-logo {
+    color: #fff;
+    justify-self: start;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.fa-react {
+    margin-left: 0.5rem;
+    font-size: 1.6rem;
+}
+
+.nav-menu {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 10px;
+    list-style: none;
+    text-align: center;
+    width: 70vw;
+    justify-content: end;
+    margin-right: 2rem;
+}        
+
+.nav-links {
+    color: #fff;
+    text-decoration: none;
+    padding: .5rem 1rem;
+}
+
+
+.nav-links,.nav-links::after {
+    padding: 10px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: transparent;
+    position: relative;
+    margin: 0 5px;
+    white-space: nowrap; 
+
+  }
+  
+  .nav-links::after {
+    --move1: inset(50% 50% 50% 50%);
+    --move2: inset(31% 0 40% 0);
+    --move3: inset(39% 0 15% 0);
+    --move4: inset(45% 0 40% 0);
+    --move5: inset(45% 0 6% 0);
+    --move6: inset(14% 0 61% 0);
+    clip-path: var(--move1);
+    content: 'GLITCH';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+  }
+  
+  .nav-links:hover::after {
+    animation: glitch_4011 1s;
+    text-shadow: 10 10px 10px black;
+    animation-timing-function: steps(2, end);
+    text-shadow: -3px -3px 0px #1df2f0, 3px 3px 0px #E94BE8;
+    background-color: transparent;
+    border: 3px solid rgb(0, 255, 213);
+  }
+  
+  .nav-links:hover {
+    text-shadow: -1px -1px 0px #1df2f0, 1px 1px 0px #E94BE8;
+  }
+  
+  .nav-links:hover {
+    background-color: transparent;
+    border: 1px solid rgb(0, 255, 213);
+    box-shadow: 0px 10px 10px -10px rgb(0, 255, 213);
+  }
+  
+  @keyframes glitch_4011 {
+    0% {
+      clip-path: var(--move1);
+      transform: translate(0px,-10px);
+    }
+  
+    10% {
+      clip-path: var(--move2);
+      transform: translate(-10px,10px);
+    }
+  
+    20% {
+      clip-path: var(--move3);
+      transform: translate(10px,0px);
+    }
+  
+    30% {
+      clip-path: var(--move4);
+      transform: translate(-10px,10px);
+    }
+  
+    40% {
+      clip-path: var(--move5);
+      transform: translate(10px,-10px);
+    }
+  
+    50% {
+      clip-path: var(--move6);
+      transform: translate(-10px,10px);
+    }
+  
+    60% {
+      clip-path: var(--move1);
+      transform: translate(10px,-10px);
+    }
+  
+    70% {
+      clip-path: var(--move3);
+      transform: translate(-10px,10px);
+    }
+  
+    80% {
+      clip-path: var(--move2);
+      transform: translate(10px,-10px);
+    }
+  
+    90% {
+      clip-path: var(--move4);
+      transform: translate(-10px,10px);
+    }
+  
+    100% {
+      clip-path: var(--move1);
+      transform: translate(0);
+    }
+  }
+  
+  
+
+.fa-bars {
+    color: #fff;
+}
+
+.nav-links-mobile {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+}
+
+            
+            @media screen and (max-width: 780px) {
+                .NavbarItems {
+                position: relative;
+                }
+                .nav-menu {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 500px;
+                position: absolute;
+                top: 80px;
+                left: -100%;
+                opacity: 1;
+                transition: all 0.5s ease;
+                }
+                .nav-menu.active {
+                    background: #1a1a1a;
+                    left: 0;
+                    opacity: 1;
+                    transition: all 0.5s ease;
+                    z-index: 1;
+                    
+                    }
+                    
+                    .nav-links {
+                    text-align: center;
+                    padding: 2rem;
+                    width: 100%;
+                    display: table;
+                    
+                    }
+                    .nav-links:hover {
+                        background-color: #fff;
+                        border-radius: 0;
+                        color: #1a1a1a;
+                    }
+                        
+                        .navbar-logo {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        transform: translate(25%, 50%);
+                        
+                        }
+                        
+                        .menu-icon {
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        transform: translate(-100%, 60%);
+                        font-size: 1.8rem;
+                        cursor: pointer;
+                        
+                        }
+                        .fa-times {
+                            color: #fff;
+                            font-size: 2rem;
+                            
+                            }
+                            
+                            .nav-links-mobile {
+                            display: block;
+                            text-align: center;
+                            padding: 1.5rem;
+                            margin: 2rem auto;
+                            border-radius: 4px;
+                            width: 80%;
+                            text-decoration: none;
+                            font-size: 1.5rem;
+                            
+                            }
+                            
+                         
+                            .nav-links-mobile, .nav-links-mobile::after {
+                                padding: 10px 50px;
+                                font-size: 20px;
+                                border: none;
+                                border-radius: 5px;
+                                color: white;
+                                background-color: transparent;
+                                position: relative;
+                              }
+                              
+                              .nav-links-mobile::after {
+                                --move1: inset(50% 50% 50% 50%);
+                                --move2: inset(31% 0 40% 0);
+                                --move3: inset(39% 0 15% 0);
+                                --move4: inset(45% 0 40% 0);
+                                --move5: inset(45% 0 6% 0);
+                                --move6: inset(14% 0 61% 0);
+                                clip-path: var(--move1);
+                                content: 'GLITCH';
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                                display: block;
+                              }
+                              
+                              .nav-links-mobile:hover::after {
+                                animation: glitch_4011 1s;
+                                text-shadow: 10 10px 10px black;
+                                animation-timing-function: steps(2, end);
+                                text-shadow: -3px -3px 0px #1df2f0, 3px 3px 0px #E94BE8;
+                                background-color: transparent;
+                                border: 3px solid rgb(0, 255, 213);
+                              }
+                              
+                              .nav-links-mobile:hover {
+                                text-shadow: -1px -1px 0px #1df2f0, 1px 1px 0px #E94BE8;
+                              }
+                              
+                              .nav-links-mobile:hover {
+                                background-color: transparent;
+                                border: 1px solid rgb(0, 255, 213);
+                                box-shadow: 0px 10px 10px -10px rgb(0, 255, 213);
+                              }
+                              
+                              @keyframes glitch_4011 {
+                                0% {
+                                  clip-path: var(--move1);
+                                  transform: translate(0px,-10px);
+                                }
+                              
+                                10% {
+                                  clip-path: var(--move2);
+                                  transform: translate(-10px,10px);
+                                }
+                              
+                                20% {
+                                  clip-path: var(--move3);
+                                  transform: translate(10px,0px);
+                                }
+                              
+                                30% {
+                                  clip-path: var(--move4);
+                                  transform: translate(-10px,10px);
+                                }
+                              
+                                40% {
+                                  clip-path: var(--move5);
+                                  transform: translate(10px,-10px);
+                                }
+                              
+                                50% {
+                                  clip-path: var(--move6);
+                                  transform: translate(-10px,10px);
+                                }
+                              
+                                60% {
+                                  clip-path: var(--move1);
+                                  transform: translate(10px,-10px);
+                                }
+                              
+                                70% {
+                                  clip-path: var(--move3);
+                                  transform: translate(-10px,10px);
+                                }
+                              
+                                80% {
+                                  clip-path: var(--move2);
+                                  transform: translate(10px,-10px);
+                                }
+                              
+                                90% {
+                                  clip-path: var(--move4);
+                                  transform: translate(-10px,10px);
+                                }
+                              
+                                100% {
+                                  clip-path: var(--move1);
+                                  transform: translate(0);
+                                }
+                              }
+                              
+                              
+
+                            
+                            Button {
+                                display: none;
+                            }
+                        
+                    
+            }
+                
